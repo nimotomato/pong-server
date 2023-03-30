@@ -13,6 +13,10 @@ const io = new Server(server, {
   cors: "*",
 });
 
+app.get("/", (request, response) => {
+  response.send("You have arrived.");
+});
+
 server.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
